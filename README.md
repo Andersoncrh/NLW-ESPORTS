@@ -1,7 +1,7 @@
 # NLW eSports 
 >Trillha Explorer
 
-![preview](./.github/preview.png)
+![preview](./.github/preview.gif)
 [Clique aqui para acessar](https://andersoncrh.github.io/NLW-ESPORTS)
 
 Projeto desenvolvido durante o evento NLW eSports da RocketSeat.
