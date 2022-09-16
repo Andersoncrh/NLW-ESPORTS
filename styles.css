@@ -141,7 +141,7 @@ section ul li:hover{
 
 }
 header div{
-    animation: fromTop .7s .2s backwards;
+    animation: fromTop .7s .4s backwards;
     /* a shorthand property "animation" necessita de ao menos 2 propriedades, a função que
     será chamada e a duração da animação, neste exemplo as terceira e quartas propriedades são
     tempo de delay da animação e uma propriedade para puxar os atributos do 'from' da animação*/
