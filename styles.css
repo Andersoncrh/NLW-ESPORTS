@@ -7,9 +7,10 @@
 
 body{
     background-image: url(./assets/bg.jpg);
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 100% auto;
+    background-size: 140% auto;
     background-color: #121214;
 }
 
@@ -45,7 +46,7 @@ header div img{
 
 /* adiciona bordas nas caixas para visualizar as divisões mais facilmente  */
 /* main *{
-    border: 1px solid red;
+    border: .01mm solid red;
 } */
 
 main{
@@ -59,13 +60,17 @@ main{
 
 section{
     color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    width: 580px;
     padding-top: 4px;
-    border-radius: 10px;
-}
+    border-radius: 16px;
+    background: linear-gradient(125deg, #9572FC, #43E7AD, #E2D45C, #9572FC, #43E7AD, #E2D45C);
+    animation: rgb 2s ease infinite;
+    background-size: 50% 100%;
+    animation-timing-function: linear;
+} 
 
 section div{
-    background-color: #242634;
+    background-color: #2A2634;
     border-radius: 8px;
     padding: 24px 32px 32px;
 }
@@ -105,7 +110,6 @@ section ul li:hover{
 
 .channel-list img{
     width: 70px;
-    height: 70px;
     border: 1px solid #443E54;
     border-radius: 50%;
 }
@@ -115,21 +119,32 @@ section ul li:hover{
 
 
 @keyframes fromTop{
-    from{
+    0%{
         opacity:0;
-        transform: translateY(-30px)
+        transform: translateY(-60px)
     }
-    to {
+    25%{
+        opacity: .3;
+        transform: translateY(10px)
+    }
+    75%{
+        opacity: .8;
+        transform: translateY(-10px)
+    }
+    100% {
         opacity: 1;
         transform: translateY(0)
     }
     /* ou
-    0%{}
-    100{} */
+    from%{}
+    to{} */
 
 }
 header div{
     animation: fromTop .7s .2s backwards;
+    /* a shorthand property "animation" necessita de ao menos 2 propriedades, a função que
+    será chamada e a duração da animação, neste exemplo as terceira e quartas propriedades são
+    tempo de delay da animação e uma propriedade para puxar os atributos do 'from' da animação*/
 }
 
 @keyframes fromBottom{
@@ -162,19 +177,31 @@ header div{
         transform: translateX(0)
     }
 }
-/* main section{
-    animation: fromBottom .7s backwards; a
-} */
-main section:nth-child(3){
-    animation-delay: 0s;
+main section{
     animation: fromBottom .7s backwards;
 }
-main section:nth-child(1){
-    animation-delay: .4s;
-    animation: fromLeft .7s backwards;
-}
-main section:nth-child(2){
-    animation-delay: .8s;
-    animation: fromRight .7s backwards;
+main section:nth-child(1){    
+    background-size: 50% 100%;
+    animation: fromLeft .4s .2s backwards,    
+    neon 2s ease infinite backwards;    
+    animation-timing-function: linear;
     
 }
+main section:nth-child(2){
+    animation: fromRight .4s .3s backwards,    
+    neon 2s ease infinite backwards;    
+    background-size: 50% 100%;
+    animation-timing-function: linear;
+    
+}
+main section:nth-child(3){
+    animation: fromBottom .4s .4s backwards,    
+    neon 2s ease infinite backwards;    
+    background-size: 50% 100%;
+    animation-timing-function: linear;
+}
+
+   @keyframes neon { 
+      0%{background-position:0% 50%}
+      100%{background-position:100% 50%}
+  }
