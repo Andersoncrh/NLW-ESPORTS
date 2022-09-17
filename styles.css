@@ -9,7 +9,7 @@ body{
     background-image: url(./assets/bg.jpg);
     height: 100vh;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top;
     background-size: 140% auto;
     background-color: #121214;
 }
@@ -60,7 +60,7 @@ main{
 
 section{
     color: white;
-    width: 580px;
+    width: 100%;
     padding-top: 4px;
     border-radius: 16px;
     background: linear-gradient(125deg, #9572FC, #43E7AD, #E2D45C, #9572FC, #43E7AD, #E2D45C);
@@ -85,7 +85,8 @@ section p{
 }
 
 ul{
-    list-style: none;
+    list-style: none;    
+    flex-wrap: wrap;
 }
 
 
